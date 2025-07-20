@@ -1,0 +1,101 @@
+/* Global styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Ant Design Layout override */
+.ant-layout {
+  min-height: 100vh !important;
+}
+
+/* Content full width */
+.ant-layout-content {
+  width: 100% !important;
+}
+
+/* Full width utilities */
+.full-width {
+  width: 100% !important;
+}
+
+.full-height {
+  height: 100% !important;
+  min-height: 100vh !important;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 767px) {
+  .desktop-menu {
+    display: none !important;
+  }
+  
+  .mobile-menu-btn {
+    display: inline-flex !important;
+  }
+
+  /* Ensure full width on mobile */
+  .ant-layout-content {
+    margin: 8px !important;
+    padding: 16px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .desktop-menu {
+    display: block !important;
+  }
+  
+  .mobile-menu-btn {
+    display: none !important;
+  }
+}
+
+/* Custom carousel dots */
+.custom-dots .slick-dots {
+  bottom: 20px;
+}
+
+.custom-dots .slick-dots li button {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+.custom-dots .slick-dots li.slick-active button {
+  background: #D04925;
+}
+
+/* Card hover effects */
+.ant-card-hoverable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D04925;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A31E22;
+}
