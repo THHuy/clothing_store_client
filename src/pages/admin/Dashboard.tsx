@@ -14,13 +14,11 @@ import {
   Spin,
   message,
 } from 'antd';
-import {
-  ShoppingOutlined,
-  DollarOutlined,
-  AlertOutlined,
-  TrophyOutlined,
-  EyeOutlined,
-} from '@ant-design/icons';
+import ShoppingOutlined from '@ant-design/icons/es/icons/ShoppingOutlined';
+import DollarOutlined from '@ant-design/icons/es/icons/DollarOutlined';
+import AlertOutlined from '@ant-design/icons/es/icons/AlertOutlined';
+import TrophyOutlined from '@ant-design/icons/es/icons/TrophyOutlined';
+import EyeOutlined from '@ant-design/icons/es/icons/EyeOutlined';
 import { reportsAPI, variantsAPI } from '../../services/api';
 
 const { Title, Text } = Typography;

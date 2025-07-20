@@ -24,18 +24,16 @@ import {
   Spin,
   Alert,
 } from 'antd';
-import {
-  PlusOutlined,
-  MinusOutlined,
-  EditOutlined,
-  SearchOutlined,
-  ReloadOutlined,
-  WarningOutlined,
-  ShoppingCartOutlined,
-  DollarOutlined,
-  InboxOutlined,
-  UserOutlined,
-} from '@ant-design/icons';
+import PlusOutlined from '@ant-design/icons/es/icons/PlusOutlined';
+import MinusOutlined from '@ant-design/icons/es/icons/MinusOutlined';
+import EditOutlined from '@ant-design/icons/es/icons/EditOutlined';
+import SearchOutlined from '@ant-design/icons/es/icons/SearchOutlined';
+import ReloadOutlined from '@ant-design/icons/es/icons/ReloadOutlined';
+import WarningOutlined from '@ant-design/icons/es/icons/WarningOutlined';
+import ShoppingCartOutlined from '@ant-design/icons/es/icons/ShoppingCartOutlined';
+import DollarOutlined from '@ant-design/icons/es/icons/DollarOutlined';
+import InboxOutlined from '@ant-design/icons/es/icons/InboxOutlined';
+import UserOutlined from '@ant-design/icons/es/icons/UserOutlined';
 import type { ColumnsType } from 'antd/es/table';
 import dayjs, { Dayjs } from 'dayjs';
 import { getImageUrl } from '../../utils/imageUtils';

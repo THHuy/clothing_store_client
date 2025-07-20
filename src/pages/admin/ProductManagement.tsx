@@ -20,13 +20,12 @@ import {
   Image,
   Tooltip,
 } from 'antd';
-import {
-  PlusOutlined,
-  EditOutlined,
-  DeleteOutlined,
-  EyeOutlined,
-  UploadOutlined,
-} from '@ant-design/icons';
+import PlusOutlined from '@ant-design/icons/es/icons/PlusOutlined';
+import EditOutlined from '@ant-design/icons/es/icons/EditOutlined';
+import DeleteOutlined from '@ant-design/icons/es/icons/DeleteOutlined';
+import EyeOutlined from '@ant-design/icons/es/icons/EyeOutlined';
+import UploadOutlined from '@ant-design/icons/es/icons/UploadOutlined';
+
 import type { Product, ProductCategory } from '../../types';
 import type { ColumnsType } from 'antd/es/table';
 import { productsAPI, categoriesAPI } from '../../services/api';

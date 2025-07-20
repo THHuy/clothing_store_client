@@ -15,15 +15,14 @@ import {
   Spin,
   Tabs
 } from 'antd';
-import {
-  DownloadOutlined,
-  FileExcelOutlined,
-  BarChartOutlined,
-  ShoppingCartOutlined,
-  InboxOutlined,
-  SwapOutlined,
-  EyeOutlined
-} from '@ant-design/icons';
+import DownloadOutlined from '@ant-design/icons/es/icons/DownloadOutlined';
+import FileExcelOutlined from '@ant-design/icons/es/icons/FileExcelOutlined';
+import BarChartOutlined from '@ant-design/icons/es/icons/BarChartOutlined';
+import ShoppingCartOutlined from '@ant-design/icons/es/icons/ShoppingCartOutlined';
+import InboxOutlined from '@ant-design/icons/es/icons/InboxOutlined';
+import SwapOutlined from '@ant-design/icons/es/icons/SwapOutlined';
+import EyeOutlined from '@ant-design/icons/es/icons/EyeOutlined';
+
 import dayjs from 'dayjs';
 
 const { Title, Text } = Typography;
