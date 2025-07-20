@@ -7,10 +7,7 @@ import {
   Avatar,
   Dropdown,
   Space,
-  Badge,
   notification,
-  Tooltip,
-  Typography,
 } from 'antd';
 import {
   DashboardOutlined,
@@ -20,17 +17,14 @@ import {
   UserOutlined,
   LogoutOutlined,
   SettingOutlined,
-  BellOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
-  ClockCircleOutlined,
 } from '@ant-design/icons';
 import { useAuth } from '../contexts/AuthContext';
-import { getTokenExpirationInfo, shouldShowExpirationWarning, formatExpirationDate } from '../utils/authUtils';
+import { getTokenExpirationInfo, shouldShowExpirationWarning} from '../utils/authUtils';
 import type { MenuProps } from 'antd';
 
 const { Header, Sider, Content } = Layout;
-const { Text } = Typography;
 
 const AdminLayout: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -39,10 +33,6 @@ const AdminLayout: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Debug log để kiểm tra user role
-  console.log('🔍 AdminLayout Debug - Current user:', state.user);
-  console.log('🔍 AdminLayout Debug - User role:', state.user?.role);
-  console.log('🔍 AdminLayout Debug - Is admin check:', state.user?.role === 'ADMIN');
 
   // Update session info every minute
   useEffect(() => {
@@ -66,25 +56,7 @@ const AdminLayout: React.FC = () => {
     }
   }, [sessionInfo]);
 
-  const SessionInfo: React.FC = () => {
-    if (!sessionInfo.isValid || !sessionInfo.expiresAt || !sessionInfo.timeLeft) {
-      return null;
-    }
 
-    return (
-      <Tooltip 
-        title={`Phiên hết hạn lúc: ${formatExpirationDate(sessionInfo.expiresAt)}`}
-        placement="bottom"
-      >
-        <Space size="small" style={{ color: '#6E6E6E', fontSize: '12px' }}>
-          <ClockCircleOutlined />
-          <Text type="secondary" style={{ fontSize: '12px' }}>
-            Còn: {sessionInfo.timeLeft}
-          </Text>
-        </Space>
-      </Tooltip>
-    );
-  };
 
   const menuItems: MenuProps['items'] = [
     {
@@ -224,16 +196,8 @@ const AdminLayout: React.FC = () => {
           />
 
           <Space size="middle">
-            <SessionInfo />
             
-            <Badge count={5}>
-              <Button
-                type="text"
-                icon={<BellOutlined />}
-                size="large"
-                style={{ color: '#6E6E6E' }}
-              />
-            </Badge>
+
 
             <Dropdown menu={{ items: userMenuItems }} placement="bottomRight">
               <Space style={{ cursor: 'pointer' }}>
